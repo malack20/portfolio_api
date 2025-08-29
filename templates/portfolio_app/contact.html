@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+    <div style="padding: 50px;">
+        <h2>Contact Me</h2>
+        <p>Please feel free to reach out to me with any questions or inquiries.</p>
+        <form action="#" method="post" style="max-width: 500px; margin-top: 20px;">
+            {% csrf_token %}
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="message" style="display: block; margin-bottom: 5px;">Message:</label>
+                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px;"></textarea>
+            </div>
+            <button type="submit" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 5px;">Send Message</button>
+        </form>
+    </div>
+{% endblock %}

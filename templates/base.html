@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Portfolio API{% endblock %}</title>
+    <!-- Add your CSS and other head elements here -->
+</head>
+<body>
+    <header>
+        <h1>My Portfolio API Backend</h1>
+        <nav>
+            <a href="{% url 'admin:index' %}">Admin Dashboard</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Content from other templates will go here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {% now "Y" %} My Portfolio. All rights reserved.</p>
+    </footer>
+    <!-- Add your JavaScript files here -->
+</body>
+</html>
