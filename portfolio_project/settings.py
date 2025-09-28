@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'corsheaders',
     # My apps
     'portfolio_app',
+    
 ]
 
 MIDDLEWARE = [
